@@ -28,12 +28,13 @@ const CreateForm = () => {
       body: JSON.stringify(ticket),
     });
     if (res.status === 201) {
+      router.refresh();
       router.push('/tickets');
     }
   };
 
   return (
-    <form className="w-1/2">
+    <form className="w-1/2" onSubmit={handleSubmit}>
       <label>
         <span>Title:</span>
         <input
