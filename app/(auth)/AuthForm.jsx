@@ -2,12 +2,12 @@
 
 import { useState } from 'react';
 
-const AuthForm = () => {
+const AuthForm = ({ handleSubmit }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   return (
-    <form>
+    <form onSubmit={(e) => handleSubmit(e, email, password)}>
       <label>
         <span>Email:</span>
         <input
