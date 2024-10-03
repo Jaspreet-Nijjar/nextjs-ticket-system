@@ -1,10 +1,12 @@
+'use client';
+
 import AuthForm from '../AuthForm';
 
 const Login = () => {
   const handleSubmit = async (e, email, password) => {
     e.preventDefault();
 
-    console.log(email, password);
+    console.log('user login', email, password);
   };
 
   return (
