@@ -27,6 +27,7 @@ const AuthForm = () => {
           required
         />
       </label>
+      <button className="btn-primary">Submit</button>
     </form>
   );
 };
